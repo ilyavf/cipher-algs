@@ -28,4 +28,4 @@ The smallest displacement that indicates a multiple of the key length is the len
 
 2. Shift the ciphertext by that length and XOR it with itself.
 This removes the key and leaves you with plaintext XORed with the plaintext shifted the length of the key.
-Since English h
+Since English has 1.3 bits of real information per byte, there is plenty of redundancy for determining a unique decryption.
