@@ -1,6 +1,8 @@
 Cryptography algorithms
 ===================
 
+# Different ciphers
+
 ## Simple XOR
 
 This is a symmetric algorithm. The plaintext is being XORed with a keyword to generate the ciphertext. Since XORing the same value twice restores the original, encryption and decryption use exactly the same program:
@@ -30,7 +32,23 @@ The smallest displacement that indicates a multiple of the key length is the len
 This removes the key and leaves you with plaintext XORed with the plaintext shifted the length of the key.
 Since English has 1.3 bits of real information per byte, there is plenty of redundancy for determining a unique decryption.
 
-## Links
+
+# Terminology
+(http://en.wikipedia.org/wiki/Cipher)
+- Classic
+-- Substitution
+--- Monoalphabetic
+--- Polyalphabetic
+-- Transposition
+- Rotor Machines
+- Modern:
+-- Private Key
+--- Stream
+--- Block
+-- Public Key
+
+
+# Links
 - http://forums.devshed.com/security-and-cryptography-17/simple-xor-theory-662613.html
 - http://practicalcryptography.com
 - http://practicalcryptography.com/cryptanalysis/text-characterisation/index-coincidence/
