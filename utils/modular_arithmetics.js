@@ -19,6 +19,7 @@ var modMulti = function (a, b, m) {
 };
 var modNegative = function (a,m) {
     m = m || M;
+    a = Math.abs(a);
     for (var b = 0; b < m; b++) {
         if (modAdd(a, b, m) == 0) {
             log('[modNegative]: ' + a + ', ' + m + ' => ' + b);
