@@ -1,7 +1,7 @@
 Cryptography algorithms
 ===================
 
-# Different ciphers
+Different ciphers
 
 ## Simple XOR
 
@@ -32,20 +32,40 @@ The smallest displacement that indicates a multiple of the key length is the len
 This removes the key and leaves you with plaintext XORed with the plaintext shifted the length of the key.
 Since English has 1.3 bits of real information per byte, there is plenty of redundancy for determining a unique decryption.
 
+## Affine
+
+This is a monoalphabetic substitution cipher.
+```
+ek(x) = ax + b, x belongs to Zm
+dk(y) = a^-1 ( y - b ), y belongs to Zm
+```
+Implemented in ./classic/AffineCipher. To test execute the following with NodeJS:
+```cmd
+$ node ./classic/AffineCipher/affine_run.js
+
+*** Affine cipher: parameters:
+M(agnitude) = 33, ek(x) = 7x + 3, dk(y) = 19 (y - 3)
+*** Affine cipher: encoding ... ***
+Original: аффинныйшифрявляетсячастнымслучаемшифраподстановки
+Processd: гссаввбжмасцьрфьедэьёгэдвбыэфкёгеымасцгпиюэдгвирна
+*** Affine cipher: decoding ... ***
+Original: гссаввбжмасцьрфьедэьёгэдвбыэфкёгеымасцгпиюэдгвирна
+Processd: аффинныйшифрявляетсячастнымслучаемшифраподстановки
+```
 
 # Terminology
 (http://en.wikipedia.org/wiki/Cipher)
 - Classic
--- Substitution
---- Monoalphabetic
---- Polyalphabetic
--- Transposition
+  - Substitution
+    - Monoalphabetic (Affine)
+    - Polyalphabetic
+  - Transposition
 - Rotor Machines
 - Modern:
--- Private Key
---- Stream
---- Block
--- Public Key
+  - Private Key
+    - Stream
+    - Block
+  - Public Key
 
 
 # Links
