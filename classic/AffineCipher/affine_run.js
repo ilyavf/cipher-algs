@@ -3,13 +3,9 @@ var af = require('./affine_cipher.js'),
     decrypted;
 
 af.setAB(7,3);
-af.ek(4);
 af.debug(1);
 
-//crypted = af.encode('0123456');
-//decrypted = af.decode(crypted);
-
-af.mode('letter');
-//crypted = af.encode('аффинныйшифрявляетсячастнымслучаемшифраподстановки');
-crypted = af.encode('аффинныйшифр');
+af.mode(af.MODE_LETTER);
+af.printParams();
+crypted = af.encode('аффинныйшифрявляетсячастнымслучаемшифраподстановки');
 decrypted = af.decode(crypted);

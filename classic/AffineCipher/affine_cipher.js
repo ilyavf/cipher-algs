@@ -40,17 +40,15 @@ var toArray = function (txt) {
 };
 var process = function (txt, f) {
     txt = toArray(txt || origin);
-    log('Original', txt.join(''));
+    log('Original: ', txt.join(''));
     if (mode == MODE_LETTER) {
         txt = convertToMode(txt, MODE_DIGIT);
     }
-    //log('Original', txt);
     var txt2 = sub[f](txt);
-    //log('Processd', txt2);
     if (mode == MODE_LETTER) {
         txt2 = convertToMode(txt2, MODE_LETTER);
     }
-    log('Processd', txt2.join(''));
+    log('Processd: ', txt2.join(''));
     return txt2;
 };
 var encode = function (txt) {
@@ -88,6 +86,14 @@ module.exports = {
     dk: dk,
     encode: encode,
     decode: decode,
-    mode: function (m) { mode =  m == 'letter'; }
+    mode: function (m) { mode =  m == MODE_LETTER ? MODE_LETTER : MODE_DIGIT; },
+    MODE_LETTER: MODE_LETTER,
+    MODE_DIGIT: MODE_DIGIT,
+    printParams: function () {
+        var s = 'M(agnitude) = ' + m + ', ek(x) = ' + a + 'x + ' + b + ', dk(y) = ' + mod.obrat(a) + ' (y - ' + b + ')';
+        log('*** Affine cipher: parameters:');
+        log(s);
+        return s;
+    }
 };
 

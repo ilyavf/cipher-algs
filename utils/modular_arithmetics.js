@@ -1,8 +1,8 @@
-console.log('Modular arithmetics');
-console.log('add :: Int a -> Int b -> Int m -> Int');
-console.log('multi :: Int a -> Int b -> Int m -> Int');
-console.log('negative :: Int a -> Int m -> Int');
-console.log('obrat :: Int a -> Int m -> Int');
+//console.log('Modular arithmetics');
+//console.log('add :: Int a -> Int b -> Int m -> Int');
+//console.log('multi :: Int a -> Int b -> Int m -> Int');
+//console.log('negative :: Int a -> Int m -> Int');
+//console.log('obrat :: Int a -> Int m -> Int');
 var M;
 var debug = false;
 var modAdd = function (a, b, m) {
