@@ -106,14 +106,14 @@ $ node
 
 - 577. W.F. Friedman, The Index of Coincidence and Its Applications in Cryptography, Riverbank Publication No. 22,
 Riverbank Labs, 1920. Reprinted by Aegean Park Press, 1987.
--- downloaded from: http://faculty.ksu.edu.sa/2170/Other%20Papers/the_index_of_coincidence_and_its_application_in_cryptonalysis.pdf
--- http://faculty.ksu.edu.sa/2170/Other%20Papers/Forms/AllItems.aspx
+  - downloaded from: http://faculty.ksu.edu.sa/2170/Other%20Papers/the_index_of_coincidence_and_its_application_in_cryptonalysis.pdf
+  - http://faculty.ksu.edu.sa/2170/Other%20Papers/Forms/AllItems.aspx
 - Пилиди В.С. Криптография. Вводные главы: Учебное пособие. 2009. Учебное пособие состоит из трех глав. В первой главе
 рассматриваются некоторые классические криптосистемы. Кроме того, в этой главе приводятся необходимые сведения из курсов
 общей алгебры и теории чисел. Вторая глава посвящена криптоанализу классических шифров. В третьей главе излагаются
 некоторые вопросы теории Шеннона. Рассматривается вопрос об абсолютной стойкости шифра, вводится понятие энтропии.
 В качестве приложений изложенных результатов рассматриваются следующие вопросы: кодирование по методу Хаффмена,
 расстояние единственности для криптосистемы. Пособие предназначено для студентов, изучающих курс криптографии.
--- downloaded from: http://window.edu.ru/resource/816/68816
--- found in: http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D1%81%D0%BE%D0%B2%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B9
+	- downloaded from: http://window.edu.ru/resource/816/68816
+	- found in: http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D1%81%D0%BE%D0%B2%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B9
 
