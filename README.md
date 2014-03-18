@@ -1,9 +1,26 @@
 Cryptography algorithms
 ===================
 
-Different ciphers
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+**Table of Contents**
+
+- [Different ciphers](#different-ciphers)
+	- [Simple XOR](#simple-xor)
+		- [Test XOR](#test-xor)
+		- [How to break XOR](#how-to-break-xor)
+	- [Affine](#affine)
+- [Terminology](#terminology)
+- [Links](#links)
+	- [Internet](#internet)
+	- [Printed sources](#printed-sources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Different ciphers
 
 ## Simple XOR
+
+### Test XOR
 
 This is a symmetric algorithm. The plaintext is being XORed with a keyword to generate the ciphertext. Since XORing the same value twice restores the original, encryption and decryption use exactly the same program:
 
@@ -17,7 +34,7 @@ yU\]_G_C]T
 Hello, world!
 ```
 
-### How to break
+### How to break XOR
 
 Assume the plaintext is English. Furthermore, assume the key length is any small number of bytes. Here’s how to break it:
 
@@ -63,6 +80,7 @@ $ node
 ```
 
 # Terminology
+
 (http://en.wikipedia.org/wiki/Cipher)
 - Classic
   - Substitution
@@ -76,13 +94,16 @@ $ node
     - Block
   - Public Key
 
-
 # Links
+
+## Internet
+
 - http://forums.devshed.com/security-and-cryptography-17/simple-xor-theory-662613.html
 - http://practicalcryptography.com
 - http://practicalcryptography.com/cryptanalysis/text-characterisation/index-coincidence/
 
 ## Printed sources
+
 - 577. W.F. Friedman, The Index of Coincidence and Its Applications in Cryptography, Riverbank Publication No. 22,
 Riverbank Labs, 1920. Reprinted by Aegean Park Press, 1987.
 -- downloaded from: http://faculty.ksu.edu.sa/2170/Other%20Papers/the_index_of_coincidence_and_its_application_in_cryptonalysis.pdf
