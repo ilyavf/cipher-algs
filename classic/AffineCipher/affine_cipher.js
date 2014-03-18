@@ -1,17 +1,17 @@
-var mod = require('../../utils/modular_arithmetics.js');
-var sub = require('../substitution_cipher.js');
+var mod = require('../../utils/modular_arithmetics.js'),
+    sub = require('../substitution_cipher.js');
 
-var a = 1;
-var b = 1;
-var m = 33; // Russian alphabet
-var letters = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'.split('');
-//var m = 26; // English alphabet
-var origin;
-var debug = false;
-var mode = 0;
+var a = 1,
+    b = 1,
+    m = sub.alphabet.rus.magnitude,
+    letters = sub.alphabet.rus.letters;
+
+var origin,
+    debug = false,
+    mode = 0;
+
 const MODE_LETTER = 1;
 const MODE_DIGIT = 0;
-
 
 mod.setM(m);
 
@@ -35,6 +35,8 @@ var dk = function (y) {
 
 sub.setEK(ek);
 sub.setDK(dk);
+sub.chooseLetters('rus');
+
 var toArray = function (txt) {
     return !txt.join ? txt.split('') : txt;
 };
@@ -42,11 +44,11 @@ var process = function (txt, f) {
     txt = toArray(txt || origin);
     log('Original: ', txt.join(''));
     if (mode == MODE_LETTER) {
-        txt = convertToMode(txt, MODE_DIGIT);
+        txt = sub.convertToDigits(txt);
     }
     var txt2 = sub[f](txt);
     if (mode == MODE_LETTER) {
-        txt2 = convertToMode(txt2, MODE_LETTER);
+        txt2 = sub.convertToLetters(txt2);
     }
     log('Processd: ', txt2.join(''));
     return txt2;
@@ -58,13 +60,6 @@ var encode = function (txt) {
 var decode = function (txt) {
     log('*** Affine cipher: decoding ... ***');
     return process(txt, 'decode');
-};
-var convertToMode = function (arr, mode) {
-    var converted =  arr.map(function (v) {
-        return !mode ? letters.indexOf(v) : letters[v];
-    });
-    //log('convertToMode: ', arr, mode, converted);
-    return converted;
 };
 var log = function () {
     if (debug)
@@ -86,9 +81,9 @@ module.exports = {
     dk: dk,
     encode: encode,
     decode: decode,
-    mode: function (m) { mode =  m == MODE_LETTER ? MODE_LETTER : MODE_DIGIT; },
-    MODE_LETTER: MODE_LETTER,
-    MODE_DIGIT: MODE_DIGIT,
+    mode: function (m) { mode =  m == sub.MODE_LETTER ? sub.MODE_LETTER : sub.MODE_DIGIT; },
+    MODE_LETTER: sub.MODE_LETTER,
+    MODE_DIGIT: sub.MODE_DIGIT,
     printParams: function () {
         var s = 'M(agnitude) = ' + m + ', ek(x) = ' + a + 'x + ' + b + ', dk(y) = ' + mod.obrat(a) + ' (y - ' + b + ')';
         log('*** Affine cipher: parameters:');
