@@ -53,12 +53,21 @@ Original: гссаввбжмасцьрфьедэьёгэдвбыэфкёгеым
 Processd: аффинныйшифрявляетсячастнымслучаемшифраподстановки
 ```
 
+Number of keys is found as: m * eilerF(m). For Russian alphabet number of keys in Affine cipher is 33*eilerF(33),
+where eilerF returns amount of co-prime numbers with m=33. To test run:
+```cmd
+$ node
+> var misc = require('./utils/misc.js');
+> 33 * misc.eilerF(33)
+660
+```
+
 # Terminology
 (http://en.wikipedia.org/wiki/Cipher)
 - Classic
   - Substitution
     - Monoalphabetic (Affine)
-    - Polyalphabetic
+    - Polyalphabetic (Vigenère)
   - Transposition
 - Rotor Machines
 - Modern:
