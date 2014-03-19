@@ -9,7 +9,7 @@ crypted = vi.encode(origin);
 decrypted = vi.decode(crypted);
 
 console.log('*** Vigenere Cipher ***');
-console.log('Key: ' + keyPhrase);
+console.log(vi.printParams());
 console.log('Origin: ' + origin);
 console.log('Cryptd: ' + crypted.join(''));
 console.log('Decryp: ' + decrypted.join(''));

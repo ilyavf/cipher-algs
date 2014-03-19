@@ -8,7 +8,8 @@ Cryptography algorithms
 	- [Simple XOR](#simple-xor)
 		- [Test XOR](#test-xor)
 		- [How to break XOR](#how-to-break-xor)
-	- [Affine](#affine)
+	- [Affine Cipher](#affine-cipher)
+	- [Viere Cipgenher](#vigenere-cipher)
 - [Terminology](#terminology)
 - [Links](#links)
 	- [Internet](#internet)
@@ -49,7 +50,7 @@ The smallest displacement that indicates a multiple of the key length is the len
 This removes the key and leaves you with plaintext XORed with the plaintext shifted the length of the key.
 Since English has 1.3 bits of real information per byte, there is plenty of redundancy for determining a unique decryption.
 
-## Affine
+## Affine Cipher
 
 This is a monoalphabetic substitution cipher.
 ```
@@ -77,6 +78,19 @@ $ node
 > var misc = require('./utils/misc.js');
 > 33 * misc.eilerF(33)
 660
+```
+
+## Vigenere Cipher
+
+Polyalphabetic cipher.
+
+```cmd
+node classic/VigenereCipher/vigenere_run.js
+*** Vigenere Cipher ***
+M(agnitude) = 33, key phrase: "скрыть", number of keys of the same length: 1291467969
+Origin: шифрвиженератакженеявляетсянадежным
+Cryptd: йуелфешпюагьдкывчйцйтжсбдьпитацсюця
+Decryp: шифрвиженератакженеявляетсянадежным
 ```
 
 # Terminology
