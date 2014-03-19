@@ -87,7 +87,7 @@ Polyalphabetic cipher.
 ```cmd
 node classic/VigenereCipher/vigenere_run.js
 *** Vigenere Cipher ***
-M(agnitude) = 33, key phrase: "скрыть", number of keys of the same length: 1291467969
+M(agnitude) = 33, key phrase: "скрыть", number of keys of the same length = m^l : 1291467969
 Origin: шифрвиженератакженеявляетсянадежным
 Cryptd: йуелфешпюагьдкывчйцйтжсбдьпитацсюця
 Decryp: шифрвиженератакженеявляетсянадежным
