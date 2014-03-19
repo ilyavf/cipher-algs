@@ -36,6 +36,13 @@ var modObrat = function (a,m) {
         }
     }
 };
+var modSub = function (a, b, m) {
+    m = m || M;
+    var res = (a - b) % m;
+    if (res < 0) res = modNegative(res, m);
+    log('[modSub]: ' + a + ', ' + b + ', ' + m + ' => ' + res);
+    return res;
+};
 var log = function () {
     if (debug)
         console.log.apply(this, arguments);
@@ -43,6 +50,7 @@ var log = function () {
 module.exports = {
     setM: function (i) { M = i; },
     add: modAdd,
+    sub: modSub,
     multi: modMulti,
     negative: modNegative,
     obrat: modObrat,

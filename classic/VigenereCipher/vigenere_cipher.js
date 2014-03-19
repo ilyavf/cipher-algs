@@ -25,7 +25,7 @@ var decode = function (txt) {
 
 module.exports = {
     setKey: function (key) {
-        keyPhrase = key;
+        keyPhrase = sub.convertToDigits(key);
     },
     encode: encode,
     decode: decode
