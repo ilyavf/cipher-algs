@@ -9,7 +9,7 @@ Cryptography algorithms
 		- [Test XOR](#test-xor)
 		- [How to break XOR](#how-to-break-xor)
 	- [Affine Cipher](#affine-cipher)
-	- [Viere Cipgenher](#vigenere-cipher)
+	- [Vigenere Cipher](#vigenere-cipher)
 - [Terminology](#terminology)
 - [Links](#links)
 	- [Internet](#internet)
