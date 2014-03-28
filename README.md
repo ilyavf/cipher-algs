@@ -10,6 +10,7 @@ Cryptography algorithms
 		- [How to break XOR](#how-to-break-xor)
 	- [Affine Cipher](#affine-cipher)
 	- [Vigenere Cipher](#vigenere-cipher)
+	- [Hill Cipher](#hill-cipher)
 - [Terminology](#terminology)
 - [Links](#links)
 	- [Internet](#internet)
@@ -99,7 +100,28 @@ Polyalphabetic cipher. Square invertible matrix is a key: |k| * |k^-1| = 1
 
 P = C = K = (Zm)^n
 
-m = 33, n = 3. K - set of all invertible matrixes.
+Let m = 33, n = 3. K - set of all invertible matrixes.
+
+```txt
+Original: шифрование
+k:  /  1  3 17  \
+   |  10  6  3   |
+    \  2  4  5  /
+
+Devide original in groups of three. Then:
+шиф = (25 9 21)
+ров = (17 15 2)
+
+              /  1  3 17  \
+(25 9 21) *  |  10  6  3   | = (25 15 29) => ШОЬ
+              \  2  4  5  /
+
+              /  1  3 17  \
+(17 15 2) *  |  10  6  3   | = ( 6 17 14) => ЁРН
+              \  2  4  5  /
+...
+```
+
 
 (sorry, no implementation)
 
