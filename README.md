@@ -93,16 +93,27 @@ Cryptd: йуелфешпюагьдкывчйцйтжсбдьпитацсюця
 Decryp: шифрвиженератакженеявляетсянадежным
 ```
 
+## Hill Cipher
+
+Polyalphabetic cipher. Square invertible matrix is a key: |k| * |k^-1| = 1
+
+P = C = K = (Zm)^n
+
+m = 33, n = 3. K - set of all invertible matrixes.
+
+(sorry, no implementation)
+
+
 # Terminology
 
 (http://en.wikipedia.org/wiki/Cipher)
-- Classic
+- Classic ciphers
   - Substitution
     - Monoalphabetic (Affine)
-    - Polyalphabetic (Vigenère)
+    - Polyalphabetic (Vigenère, Hill)
   - Transposition
 - Rotor Machines
-- Modern:
+- Modern ciphers:
   - Private Key
     - Stream
     - Block
