@@ -102,15 +102,18 @@ P = C = K = (Zm)^n
 
 Let m = 33, n = 3. K - set of all invertible matrixes.
 
-```txt
+```
 Original: шифрование
 k:  /  1  3 17  \
    |  10  6  3   |
     \  2  4  5  /
 
-Devide original in groups of three. Then:
+Divide original string into groups of three. Then:
 шиф = (25 9 21)
 ров = (17 15 2)
+...
+
+All operations are modulo-33.
 
               /  1  3 17  \
 (25 9 21) *  |  10  6  3   | = (25 15 29) => ШОЬ
