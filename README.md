@@ -166,4 +166,11 @@ Riverbank Labs, 1920. Reprinted by Aegean Park Press, 1987.
 расстояние единственности для криптосистемы. Пособие предназначено для студентов, изучающих курс криптографии.
 	- downloaded from: http://window.edu.ru/resource/816/68816
 	- found in: http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D1%81%D0%BE%D0%B2%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B9
+- Малашонок Г. И., Решение системы линейных уравнений в целостном кольце. Ж. вычисл. матем. и матем. физ., 1983, том 23, номер 6, страницы 1497–1500
+  - downloaded from: http://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=zvmmf&paperid=4484&option_lang=rus
 
+## Ilya test
+q
+w
+e
+r
