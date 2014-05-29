@@ -58,9 +58,9 @@ This is a monoalphabetic substitution cipher.
 ek(x) = ax + b, x belongs to Zm
 dk(y) = a^-1 ( y - b ), y belongs to Zm
 ```
-Implemented in ./classic/AffineCipher. To test execute the following with NodeJS:
+Implemented in ./src/classic/AffineCipher. To test execute the following with NodeJS:
 ```cmd
-$ node ./classic/AffineCipher/affine_run.js
+$ node ./src/classic/AffineCipher/affine_run.js
 
 *** Affine cipher: parameters:
 M(agnitude) = 33, ek(x) = 7x + 3, dk(y) = 19 (y - 3)
@@ -86,7 +86,7 @@ $ node
 Polyalphabetic cipher.
 
 ```cmd
-node classic/VigenereCipher/vigenere_run.js
+node src/classic/VigenereCipher/vigenere_run.js
 *** Vigenere Cipher ***
 M(agnitude) = 33, key phrase: "скрыть", number of keys of the same length = m^l : 1291467969
 Origin: шифрвиженератакженеявляетсянадежным
@@ -168,10 +168,4 @@ Riverbank Labs, 1920. Reprinted by Aegean Park Press, 1987.
 	- found in: http://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81_%D1%81%D0%BE%D0%B2%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B9
 - Малашонок Г. И., Решение системы линейных уравнений в целостном кольце. Ж. вычисл. матем. и матем. физ., 1983, том 23, номер 6, страницы 1497–1500
   - downloaded from: http://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=zvmmf&paperid=4484&option_lang=rus
-
-## HELLO TEST
-1
-3
-4
-5
 
